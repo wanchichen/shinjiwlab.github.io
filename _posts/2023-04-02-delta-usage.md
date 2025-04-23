@@ -14,7 +14,7 @@ comments: false
 * Delta: check https://wiki.ncsa.illinois.edu/display/DSC/Delta+User+Guide#DeltaUserGuide-DirectAccesslogin_nodes
 
 # Important
-1. `Home` directory is of limited space. Please do most of your work in ocean storage (`$ cd ${PROJECT}`)
+1. `Home` directory is of limited space. Please do most of your work in storage directories (`$ cd /work/hdd` or `$ cd /work/nvme`).
 2. When you publish a paper, please **acknowledge the Delta and ACCESS**. We will get benefit when we apply for Delta credits next time.
    * [Acknowledgement webpage](https://access-ci.org/about/acknowledging-access/)
       * Example: Experiments of this work used the Bridges2 system at PSC and Delta system at NCSA through allocations CIS210014 and IRI120008P from the Advanced Cyberinfrastructure Coordination Ecosystem: Services \& Support (ACCESS) program, supported by National Science Foundation grants \#2138259,\#tel:2138286, \#tel:2138307, \#tel:2137603, and \#tel:2138296.
