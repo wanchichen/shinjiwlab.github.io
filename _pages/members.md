@@ -345,21 +345,16 @@ order: 1
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
       <div class="square">
-        <a href="https://wangpuup.github.io/" target="_blank" rel="noopener noreferrer">
-            <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/pu.jpg">
-        </a></div>
-        <div class="caption">
-            Pu Wang
-        </div>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-      <div class="square">
         <a href="https://sites.google.com/view/jialuli/" target="_blank" rel="noopener noreferrer">
             <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/jialu.jpg">
         </a></div>
         <div class="caption">
             Jialu Li
         </div>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
     </div>
     <div class="col-sm mt-3 mt-md-0">
     </div>
@@ -431,6 +426,7 @@ order: 1
 
 ##### Visitors & Collaborators
 <ul>
+<li>2025. 01 - 2025. 04: Pu Wang (KU Leuven) </li>
 <li>2024. 08 - 2025. 02: Kalvin Chang (UC Berkeley) </li>
 <li>2024. 09 - 2025. 02: Holger Severin Bovbjerg (Aalborg University) </li>
 <li>2024. 08 - 2024. 12: Carlos Carvalho (Instituto Superior Técnico ) </li>
