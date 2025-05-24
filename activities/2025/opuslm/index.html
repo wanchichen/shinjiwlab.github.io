@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html -->
+<html>
+  <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>WAVLab | Towards Intelligent Conversational AI</title>
+<meta name="description" content="Webpage of Watanabe's Audio and Voice (WAV) Lab
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://raw.githubusercontent.com/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="/assets/img/favicon.png">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/activities/2025/opuslm/">
+
+<!-- JQuery -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+<!-- Theming-->
+
+  <script src="/assets/js/theme.js"></script>
+  <!-- Load DarkMode JS -->
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+
+
+
+
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+    <!-- Distill js -->
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/assets/js/distillpub/overrides.js"></script>
+    
+  </head>
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Towards Intelligent Conversational AI",
+      "description": "A summary of our recent work on making speech language models smarter.",
+      "published": "May 22, 2025",
+      "authors": [
+        {
+          "author": "Siddhant Arora*",
+          "authorURL": "https://siddhu001.github.io/",
+          "affiliations": [
+            {
+              "name": "Carnegie Mellon University",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "author": "William Chen*",
+          "authorURL": "https://wanchichen.github.io",
+          "affiliations": [
+            {
+              "name": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "author": "Jinchuan Tian*",
+          "authorURL": "https://jctian98.github.io/",
+          "affiliations": [
+            {
+              "name": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "author": "Jiatong Shi",
+          "authorURL": "http://shijt.site",
+          "affiliations": [
+            {
+              "name": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "author": "Shinji Watanabe",
+          "authorURL": "https://sites.google.com/view/shinjiwatanabe",
+          "affiliations": [
+            {
+              "name": "",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <body class="fixed-top-nav">
+
+    <!-- Header --><header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+       WAVLab
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              About
+              
+            </a>
+          </li>
+          <!-- Blog -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/blog/">
+              Activities
+              
+            </a>
+          </li>
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/members/">
+                Members
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                Publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/open_source">
+                Open-source
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/courses/">
+                Courses
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/sponsors/">
+                Sponsors
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/info/">
+                Info
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/positions/">
+                Positions
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/speech_lunch">
+                Speech Lunch
+                
+              </a>
+          </li>
+          
+          
+          
+          
+            <div class = "toggle-container">
+              <a id = "light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1>Towards Intelligent Conversational AI</h1>
+        <p>A summary of our recent work on making speech language models smarter.</p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        <d-contents>
+          <nav class="l-text figcaption">
+          <h3>Contents</h3>
+            <div><a href="#opuslm-a-generative-foundation-model-for-speech-and-text">OpusLM - A Generative Foundation Model for Speech and Text</a></div>
+            <div><a href="#chain-of-thought-dialogue-modelling">Chain-of-Thought Dialogue Modelling</a></div>
+            <div><a href="#opuschat-a-speech-lm-that-can-remember-and-reason">OpusChat - A Speech LM that can Remember and Reason</a></div>
+            <div><a href="#opustts-scaling-zero-shot-tts">OpusTTS - Scaling Zero-Shot TTS</a></div>
+            <div><a href="#development-and-engineering">Development and Engineering</a></div>
+            
+          </nav>
+        </d-contents>
+
+        <h1 id="introduction">Introduction</h1>
+
+<p>Our papers on OpusLM and Chain-of-Thought Multi-Modal Training will be presented at <a href="https://www.interspeech2025.org/home">Interspeech 2025</a> in Rotterdam. Come check out our presentations to learn more!</p>
+
+<h1 id="opuslm---a-generative-foundation-model-for-speech-and-text">OpusLM - A Generative Foundation Model for Speech and Text</h1>
+
+<details><summary>Authors</summary>
+<p><em>Jinchuan Tian, William Chen, Yifan Peng, Jiatong Shi, Siddhant Arora, Shikar Bharadwaj, Takashi Maekaku, Yusuke Shinohara, Keita Goto, Xiang Yue, Chao-Han Huck Yang, Shinji Watanabe</em></p>
+</details>
+<p> </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="">Model</a></td>
+      <td><a href="">Paper</a></td>
+      <td><a href="">Demo</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We first present OpusLM, a family of backbone foundation models (135M-7B parameters) for generation and understanding speech/text, trained on ASR, TTS, Text Continuation, and Speech Continuation. OpusLM was developed with the goal of tackling two key  challenges in SpeechLM development: 1.) the input/output representation of speech and 2.) degradation in text-only tasks. By addressing both of these issues, OpusLM is able to obtain SOTA performance in both ASR and TTS, while maintaining strong scores on text-benchmarks like MMLU.</p>
+
+<h2 id="speech-tokenization">Speech Tokenization</h2>
+
+<p>Text-based LLMs operate on sequences of tokens, discrete integers that represent words or subwords. To fully take advantage of text-based pre-training, we must also represent speech in the same way. This is usually done through the use of quantized speech embeddings (from a mode like wav2vec2 or Whisper) or neural codecs. The two methods, however, have a clear tradeoff between <em>compression</em> and <em>learnability</em>. Codecs excel at compressing and un-compressing audio, but their representations are complex for LLMs to model. On the other hand, speech encoders have easy-to-learn representations that are well-aligned with human phonetics, but at the cost of discarding much of the information necessary for reconstruction.</p>
+
+<p>A common solution is to distill the knowledge of the speech encoder into the codec (cite moshi, speech tokenizer). However, this leads to the drawback of slower codec training while still not being able to match the performance of the audio encoder in semantic/understanding-based tasks. We use a much simpler method yet more effective for OpusLM: we use both models for tokenization and feed them into the LLM as separate input/output streams. In total, this leads to 9 audio representation streams. Like Moshi, we introduce a delay of 1 step between each audio token, allowing the model to understand audio in a course-to-fine-grained manner.</p>
+
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/blog/arch.png" class="img-fluid rounded z-depth-0" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+  </picture>
+
+</figure>
+
+<div class="caption">
+Architecture OpusLM. We use XEUS as the speech encoder and a custom version of DAC as the neural codec.
+</div>
+
+<p>With these techniques, we are able to achieve <em>enhanced</em> if not equal performance on both ASR and TTS from our multi-task training, allowing us to perform both speech generation and understanding with a single model.</p>
+
+<h2 id="text-lm-degradation">Text LM Degradation</h2>
+
+<p>If you have ever tried the <a href="">Moshi Demo</a>, you will know that the model produces high-quality conversational speech at near-human speeds. But have you ever noticed that the model can be at times, shockingly dumb? Many people have observed that training LLMs on speech-text data significantly degrades text-only performance, likely due to the conversational nature of speech: the LLM is forgetting all the world knowledge that it acquired from Wikipedia and textbooks! We find that with a lot of care, however, this can be mitigated almost completely.</p>
+
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/blog/mmlu.png" class="img-fluid rounded z-depth-0" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+  </picture>
+
+</figure>
+
+<div class="caption">
+MMLU scores compared to SOTA LLMS and SpeechLMs.
+</div>
+
+<p>We first look into the training dynamics of SpeechLMs - when during training is the model starting to forget? Interestingly, we find that it correlates completely with learning rate. The forgetting primarily occurs when the learning rate increases, such as the initial warmup stage - scores on MMLU (one of the main LLM benchmarks) drop significantly as the learning rate reaches its peak. As the learning rate decreases during the decay step, MMLU scores begin to recover. To further recover text performance, we leverage the annealing/mid-training stage of LLMs - the point in pre-training where the learning rate is rapidly decayed to zero while training on high-quality data. Finally, we can almost fully recover text performance by integrating  the <em>exact</em> same text corpora as the original LLM during annealing. Our final scores are shown in the Figure below. OpusLM 7B achieves only a small 0.9 drop in MMLU from its OLMo2 backbone after training on speech, making it signifcantly smarter than Moshi or SpiritLM.</p>
+
+<h1 id="chain-of-thought-dialogue-modelling">Chain-of-Thought Dialogue Modelling</h1>
+
+<details><summary>Authors</summary>
+<p><em>Siddhant Arora, Jinchuan Tian, Hayato Futami, Jee-weon Jung, Jiatong Shi,, Yosuke Kashiwagi, Emiru Tsunoo, Shinji Watanabe</em></p>
+</details>
+<p> </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="">Model</a></td>
+      <td><a href="">Paper</a></td>
+      <td><a href="">Demo</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>One of the most common use cases for SpeechLMs is conversational dialogue agents. Spoken dialogue, however, is very difficult to model. Despite recent progress, the inability to generate intelligent and coherent spoken responses is a major limitation of open SpeechLMs. We attribute this to two main challenges: lack of conversational training data and the inability to leverage textual knowledge. This work focuses on the latter issue and develops a solution with a common technique from NLP: Chain-of-Thought (CoT) reasoning.</p>
+
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/blog/mmlu.png" class="img-fluid rounded z-depth-0" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+  </picture>
+
+</figure>
+
+<div class="caption">
+CoT Formulation for Spoken Dialogue.
+</div>
+
+<p>A common implementation of Spoken Dialogue Systems is through a fully speech-to-speech SpeechLM: the system receives a spoken utterance, and then generates a response. This method is simple and efficient, only consuming the compute necessary to complete the task. However, we hypothesized that such a formulation was sub-optimal: the system could not efficiently leverage the underlying LLM’s world knowledge. CoT provides a solution: we allow the model to generate and reason about a text response, before generating the output speech. This forumlation is similar to traditional ASR + Dialogue + TTS cascades, but within a single end-to-end model that is immune to error propogation.</p>
+
+<p>Our results are straighforward: CoT dialogue training led to higher quality responses than speech-to-speech and cascaded systems. The textual reasoning allowed for more coherent responses compared to the speech-to-speech model, and access to the original input speech allowed the CoT model to handle emotions and paralinguistics that the cascade was not capable of.</p>
+
+<h1 id="opuschat---a-speech-lm-that-can-remember-and-reason">OpusChat - A Speech LM that can Remember and Reason</h1>
+
+<details><summary>Authors</summary>
+<p><em>Jinchuan Tian, Bo-Hao Su, Siddhant Arora, Jiatong Shi, William Chen, Keita Goto, Takashi Maekaku, Yusuke Shinohara, Chao-Han Huck Yang, Shinji Watanabe</em></p>
+</details>
+<p> </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="">Model</a></td>
+      <td><a href="">Paper</a></td>
+      <td><a href="">Demo</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We apply the lessons learned in the previous papers to develop OpusChat, an intelligent SpeechLM that remembers world knowledge and can reason before responding. We first further enhanced the textual capabilities of OpusLM 7B with additional training and annealing, leading to better knowledge retainment. Across 9 common LLM benchmarks, our new OpusLM 7B v2 achieves an average score of 62.1, nearly the same as its OLMo-2-7B backbone, and therefore much more performant than Moshi or SpiritLM.</p>
+
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/blog/mmlu.png" class="img-fluid rounded z-depth-0" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+  </picture>
+
+</figure>
+
+<div class="caption">
+Text LM Benchmark Scores.
+</div>
+
+<p>We then collected text-only instruction fine-tuning data to supervised fine-tuning, but realized that they were unsuitable for speech applications. Much of the instruction-tuning data for LLMs is designed for textual interfaces, with the output response organized into code, equations, tables, and bullet points. None of these are present in spoken language! To address this, we use LLMs to perform colloquial re-writing of the instruction-tuning data, transforming it to be much more conversational and casual. Finally, we synthesize spoken variants of the instruction-tuning data with our TTS-trained OpusLM, totalling to 240k instruction pairs which we use for CoT fine-tuning.</p>
+
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/blog/mmlu.png" class="img-fluid rounded z-depth-0" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+  </picture>
+
+</figure>
+
+<div class="caption">
+OpusChat reasoning before speaking.
+</div>
+
+<p>After CoT training, we find that OpusLM can perform intelligent speech-based tasks (such as spoken math, dialogue, spoken trivia) at a very high level, out-performing SOTA foundation models like Qwen2-Audio, Moshi, GLM-4-Voice, and Baichuan-Omni.</p>
+
+<h1 id="opustts---scaling-zero-shot-tts">OpusTTS - Scaling Zero-Shot TTS</h1>
+
+<details><summary>Authors</summary>
+<p><em>William Chen, Jinchuan Tian, Chao-Han Huck Yang, Shinji Watanabe</em></p>
+</details>
+<p> </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="">Model</a></td>
+      <td><a href="">Paper</a></td>
+      <td><a href="">Demo</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="engineering-and-development">Engineering and Development</h1>
+
+<p>We developed the models using the <a href="">ESPnet-SpeechLM</a> and/or the <a href="">ESPnet-SDS</a> codebases, with much of the evaluation done through the <a href="">VERSA</a> evaluation toolkit. These tools were designed so that SpeechLM research can be done in both a scalable and efficient manner, allowing academic labs like us to punch above our weight for large-scale training.</p>
+
+<p>For example, OpusTTS took only 4 days of training on 16 GH200 GPUs.</p>
+
+<h1 id="training-fine-tuning-and-inference-on-custom-data">Training, Fine-Tuning, and Inference on Custom Data</h1>
+
+<p>All of these models can be downloaded and perform inference from www.github.com/espnet/opuslm, with only a single pip install and a few lines of code.</p>
+
+<p>For those interested in training and fine-tuning, stay tuned! Complete training pipelines and code will be merged into the main ESPnet repository soon.</p>
+
+<h1 id="future-work">Future Work</h1>
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+      <d-bibliography src="/assets/bibliography/2025-05-22-opuslm.bib"></d-bibliography></div>
+
+    <!-- Footer -->
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2025   WAV Lab.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    
+  </div>
+</footer>
+
+
+
+    <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+    
+    
+  </body>
+</html>
